@@ -65,11 +65,11 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: egov-localization
-  - name: EGOV_PTR-SERVICES-V2_HOST
+  - name: EGOV_PET-SERVICES_HOST
     valueFrom:
       configMapKeyRef:
         name: egov-service-host
-        key: ptr-services-v2  
+        key: pet-services  
   - name: EGOV_INTERNAL_MICROSERVICE_USER_UUID
     valueFrom:
       configMapKeyRef:
