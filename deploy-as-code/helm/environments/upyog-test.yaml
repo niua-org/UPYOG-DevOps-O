@@ -560,7 +560,7 @@ report:
   initContainers:
     gitSync:
       repo: "git@github.com:upyog/upyog-configs"
-      branch: "dev"
+      branch: "Dev-2.0"
   report-locationsfile-path: "file:///work-dir/upyog-configs/configs/reports/reportFileLocationsv1.txt"
   spring-datasource-tomcat-max-active: 5
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
