@@ -320,6 +320,7 @@ egov-indexer:
 egov-pg-service:
   axis: true
   paygov: true
+  nttdata: true
   egov-pg-reconciliation-system-user-uuid: "56b75799-e7c5-42f3-a5a9-761277cf0e88"
 
 egov-persister:
