@@ -51,6 +51,8 @@ env: |
     value:  {{ index .Values "module-fields-mapping" | quote }}
   - name: MASTER_MODULE_FIELDS_MAPPING
     value:  {{ index .Values "master-module-fields-mapping" | quote }}
+  - name: NATIONAL_DASHBOARD_USER
+    value:  {{ index .Values "national.dashboard.user" | quote }}  
   - name: MODULE_ALLOWED_GROUPBY_FIELDS_MAPPING
     value:  {{ index .Values "module-allowed-groupby-fields-mapping" | quote }}
   - name: SERVER_TOMCAT_MAX_THREADS
