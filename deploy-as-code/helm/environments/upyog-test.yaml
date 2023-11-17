@@ -388,7 +388,7 @@ egov-searcher:
   initContainers:
     gitSync:
       repo: "git@github.com:upyog/upyog-configs"
-      branch: "dev"
+      branch: "Dev-2.0"
 
 
 # web >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
