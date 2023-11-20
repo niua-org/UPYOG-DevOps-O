@@ -19,12 +19,6 @@ cluster-configs:
         es-cluster-infra
       ]
 
-  rbac:
-    - role: user
-      namespaces: [egov]
-    - role: admin
-      namespaces: [playground,egov,kafka-cluster]
-
   root-ingress:
     cert-issuer: letsencrypt-prod
   configmaps:
