@@ -1,5 +1,6 @@
 global:
   domain: upyog-sandbox.niua.org
+  setup: fullsetup
   tracing-enabled: true
 
 cluster-configs:
