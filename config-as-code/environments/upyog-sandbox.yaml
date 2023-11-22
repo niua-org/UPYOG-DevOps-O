@@ -303,6 +303,10 @@ egov-mdms-service:
   java-args: -Dspring.profiles.active=monitoring
   masters-config-url: "file:///work-dir/upyog-mdms-data/master-config.json"
 
+mdms-v2:
+  heap:  "-Xmx512m -Xms512m"
+  memory_limits: "768Mi"
+  
 egov-indexer:
   heap: "-Xmx512m -Xms512m"
   memory_limits: "768Mi"
