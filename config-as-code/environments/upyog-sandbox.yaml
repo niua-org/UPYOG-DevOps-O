@@ -189,7 +189,7 @@ egov-filestore:
   filestore-url-validity: 3600
 
 egov-location:
-  memory_limits: 512Mi
+  memory_limits: 712Mi
 
 egov-notification-sms:
   sms-provider-url: "https://smsgw.sms.gov.in/failsafe/MLink"
