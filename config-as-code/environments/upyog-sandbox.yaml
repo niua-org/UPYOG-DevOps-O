@@ -638,6 +638,7 @@ logging-config:
 
 echallan-services:
   egov-idgen-challanNum-format: "PG-CH-[cy:yyyy-MM-dd]-[SEQ_EG_CH_APL]"
+  memory_limits: 512Mi
 
 jaeger:
   host: "jaeger-agent.monitoring"
