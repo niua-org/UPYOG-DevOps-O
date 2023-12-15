@@ -232,7 +232,7 @@ env: |
   - name: NTTDATA_ORIGINAL_RETURN_URL_KEY
     value: "originalreturnurl"
   - name: NTTDATA_MERCHANT_CHECKOUT_HOST
-    value; "https://pgtest.atomtech.in/staticdata/ots/js/atomcheckout.js" 
+    value: "https://pgtest.atomtech.in/staticdata/ots/js/atomcheckout.js" 
   {{- end }}
   - name: JAVA_OPTS
     value: {{ index .Values "heap" | quote }}
