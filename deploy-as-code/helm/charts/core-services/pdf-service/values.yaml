@@ -90,6 +90,8 @@ env: |
     value: {{ index .Values "data-config-urls" | quote }}
   - name: FORMAT_CONFIG_URLS
     value: {{ index .Values "format-config-urls" | quote }}
+  - name: EGOV_HOST
+    value: "https://upyog-test.niua.org"   
   - name: EGOV_LOCALISATION_HOST
     valueFrom:
       configMapKeyRef:
