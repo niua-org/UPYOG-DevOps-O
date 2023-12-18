@@ -13,9 +13,9 @@ cluster-configs:
         egov-config:
             namespace: [ egov, monitoring ]
             data:
-                db-host: <db_host_name> ## Add db-host name eg: egov-demo.database.azure.com
+                db-host: upyogpet-db.cziypksoh8k4.ap-south-1.rds.amazonaws.com:5432 ## Add db-host name eg: egov-demo.database.azure.com
                 db-name: upyogpet ## Add db-name
-                db-url: jdbc:postgresql://<db_host_name>/upyogpet ## example: jdbc:postgresql://egov-demo.postgres.database.azure.com:5432/egov_demo
+                db-url: jdbc:postgresql://upyogpet-db.cziypksoh8k4.ap-south-1.rds.amazonaws.com:5432/upyogpet ## example: jdbc:postgresql://egov-demo.postgres.database.azure.com:5432/egov_demo
                 domain: upyogpet.niua.in ## Add your Domain Name    
                 egov-services-fqdn-name: https://upyogpet.niua.in/ ## Add your Domain Name
                 
@@ -573,12 +573,12 @@ kafka-v2:
   persistence:
     enabled: true
     aws:
-      - volumeId: "<kafka-v2_volume_id_1>" ## REPLACE: add volume id
-        zone: <zone>     ## REPLACE: add respective zone. 
-      - volumeId: "<kafka-v2_volume_id_2>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
-      - volumeId: "<kafka-v2_volume_id_3>"  ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
+      - volumeId: "vol-0e0d7df14bcb895a1" ## REPLACE: add volume id
+        zone: ap-south-1b     ## REPLACE: add respective zone. 
+      - volumeId: "vol-0b8572ac715778414" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
+      - volumeId: "vol-04236fa61a760a2ae"  ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
   zookeeperHosts: "zookeeper-v2.zookeeper-cluster:2181/kafka-v2"
 
   heapOptions: "-Xms704M -Xmx704M"
@@ -608,12 +608,12 @@ zookeeper-v2:
   persistence:
     enabled: true
     aws:
-      - volumeId: "<zookeeper-v2_volume_id_1>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
-      - volumeId: "<zookeeper-v2_volume_id_2>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
-      - volumeId: "<zookeeper-v2_volume_id_3>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
+      - volumeId: "vol-0406cfb16bb9b9a7f" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
+      - volumeId: "vol-0f62c473f713344a5" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
+      - volumeId: "vol-05b9345576d4b3fc5" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
 
   ## Zookeeper JVM Heap Option
   heapOptions: "-Xms256M -Xmx256M"
@@ -633,12 +633,12 @@ elasticsearch-data-v1:
   persistence:
     enabled: true
     aws:
-      - volumeId: "<elasticsearch-data_volume_id_1>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
-      - volumeId: "<elasticsearch-data_volume_id_2>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
-      - volumeId: "<elasticsearch-data_volume_id_3>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
+      - volumeId: "vol-092640a95f7909b40" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
+      - volumeId: "vol-0a5a5d3784cca2fc6" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
+      - volumeId: "vol-02add442f1f7ff456" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
 
   esJavaOpts: "-Xmx1g -Xms1g"
   resources:
@@ -658,12 +658,12 @@ elasticsearch-master-v1:
   persistence:
     enabled: true
     aws:
-      - volumeId: "<elasticsearch-master_volume_id_1>" ## REPLACE: add volume id
-        zone: <zone> ##REPLACE: add zone
-      - volumeId: "<elasticsearch-master_volume_id_2>" ## REPLACE: add volume id
-        zone: <zone> ##REPLACE: add zone
-      - volumeId: "<elasticsearch-master_volume_id_3>" ## REPLACE: add volume id
-        zone: <zone> ## REPLACE: add zone
+      - volumeId: "vol-097dab3592b61d302" ## REPLACE: add volume id
+        zone: ap-south-1b ##REPLACE: add zone
+      - volumeId: "vol-060900c40446c58bf" ## REPLACE: add volume id
+        zone: ap-south-1b ##REPLACE: add zone
+      - volumeId: "vol-0191bbbff3aa717b6" ## REPLACE: add volume id
+        zone: ap-south-1b ## REPLACE: add zone
  
   esJavaOpts: "-Xmx448m -Xms448m"
   resources:
