@@ -22,12 +22,12 @@ image:
   repository: "asset-services"
 replicas: "1"
 healthChecks:
-  enabled: true
+  enabled: false
   livenessProbePath: "/asset-services/health"
   readinessProbePath: "/asset-services/health"
 appType: "java-spring"
 tracing-enabled: true
-heap: "-Xmx512m -Xms512m"
+heap: "-Xmx256m -Xms256m"
 java-args: "-Dspring.profiles.active=monitoring"
 notification-sms-enabled: ""
 employee-allowed-search-params: ""
