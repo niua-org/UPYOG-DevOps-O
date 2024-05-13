@@ -22,7 +22,7 @@ image:
   repository: "asset-services"
 replicas: "1"
 healthChecks:
-  enabled: false
+  enabled: true
   livenessProbePath: "/asset-services/health"
   readinessProbePath: "/asset-services/health"
 appType: "java-spring"
