@@ -352,6 +352,9 @@ report:
   report-locationsfile-path: "file:///work-dir/configs/reports/reportFileLocationsv1.txt"
 
 pdf-service:
+  replicas: 1
+  images:
+    - upyogio/pdf-service:v1.2.1-ccdfd49b47-24
   initContainers:
     gitSync:
       repo: "git@github.com:niua-org/upyog-configs-niuatt"     ##### Change repo url with Your fork Repo url
