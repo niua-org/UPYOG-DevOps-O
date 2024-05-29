@@ -168,14 +168,16 @@ citizen:
       ';"
 egov-filestore:
   replicas: 1
-  resources: |
-    limits:
-      cpu: 600m
-      memory: 1200Mi
-    requests:
-      cpu: 600m
-      memory: 1024Mi  
-  heap: "-Xmx1000m -Xms512m"
+  heap: "-Xmx512m -Xms256m"
+  memory_limits: 512Mi
+  #resources: |
+   # limits:
+    #  cpu: 600m
+     # memory: 1200Mi
+    #requests:
+     # cpu: 600m
+      #memory: 1024Mi  
+  #heap: "-Xmx1000m -Xms512m"
   #memory_limits: 512Mi
   #heap: -Xmx1000m -Xms412m 
   volume: /opt/eGov/filestore
