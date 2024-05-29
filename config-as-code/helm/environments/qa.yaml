@@ -235,6 +235,51 @@ egov-user:
   egov-state-level-tenant-id: "in"
   decryption-abac-enabled: "false"
 
+inbox:
+  service-search-mapping: "{'FSM':{'searchPath':'https://niuatt.niua.in/fsm/v1/_search',
+                            'dataRoot':'fsm','applNosParam':'applicationNos','businessIdProperty':'applicationNo',
+                            'applsStatusParam':'applicationStatus'},
+                            'FSM_POST_PAY_SERVICE':{'searchPath':'https://niuatt.niua.in/fsm/v1/_search',
+                            'dataRoot':'fsm',
+                            'applNosParam':'applicationNos',
+                            'businessIdProperty':'applicationNo',
+                            'applsStatusParam':'applicationStatus'},
+                            'FSM_VEHICLE_TRIP':{'searchPath':'https://niuatt.niua.in/vehicle/trip/v1/_search',
+                            'dataRoot':'vehicleTrip',
+                            'applNosParam':'applicationNos',
+                            'businessIdProperty':'applicationNo',
+                            'applsStatusParam':'applicationStatus'},
+                            'PT.CREATE,PT.MUTATION,PT.UPDATE':{'searchPath':'https://niuatt.niua.in/property-services/property/_search',
+                            'dataRoot':'Properties',
+                            'applNosParam':'acknowldgementNumber',
+                            'businessIdProperty':'acknowldgementNumber',
+                            'applsStatusParam':'status'},
+                            'NewTL,EDITRENEWAL,DIRECTRENEWAL':{'searchPath':'https://niuatt.niua.in/tl-services/v1/_search',
+                            'dataRoot':'Licenses',
+                            'applNosParam':'applicationNumber',
+                            'businessIdProperty':'applicationNumber',
+                            'applsStatusParam':'status'},
+                            'BPA_LOW,BPA,BPA_OC':{'searchPath':'https://niuatt.niua.in/bpa-services/v1/bpa/_search',
+                            'dataRoot':'BPA','applNosParam':'applicationNo',
+                            'businessIdProperty':'applicationNo','applsStatusParam':'status'},
+                            'ARCHITECT,ENGINEER,STRUCTURALENGINEER,BUILDER':{'searchPath':'https://niuatt.niua.in/tl-services/v1/BPAREG/_search',
+                            'dataRoot':'Licenses','applNosParam':'applicationNumber','businessIdProperty':'applicationNumber','applsStatusParam':'status'},
+                            'FIRE_NOC_SRV,FIRE_NOC_OFFLINE,AIRPORT_NOC_OFFLINE,AIRPORT_NOC_SRV':{'searchPath':'https://niuatt.niua.in/noc-services/v1/noc/_search',
+                            'dataRoot':'Noc','applNosParam':'applicationNo','businessIdProperty':'applicationNo','applsStatusParam':'status'},
+                            'NewWS1,ModifyWSConnection,DisconnectWSConnection':{'searchPath':'https://niuatt.niua.in/ws-services/wc/_search',
+                            'dataRoot':'WaterConnection',
+                            'applNosParam':'applicationNumber',
+                            'businessIdProperty':'applicationNo',
+                            'applsStatusParam':'applicationStatus'},
+                            'NewSW1,ModifySWConnection,DisconnectSWConnection':{'searchPath':'https://niuatt.niua.in/sw-services/swc/_search',
+                            'dataRoot':'SewerageConnections',
+                            'applNosParam':'applicationNumber',
+                            'businessIdProperty':'applicationNo',
+                            'applsStatusParam':'applicationStatus'},
+                            'WS.AMENDMENT,SW.AMENDMENT':{'searchPath':'https://niuatt.niua.in/billing-service/amendment/_search',
+                            'dataRoot':'Amendments','applNosParam':'consumerCode',
+                            'businessIdProperty':'amendmentId','applsStatusParam':'status'}}"
+
 chatbot:
   kafka-topics-partition-count: 3
   kafka-topics-replication-factor: 2
