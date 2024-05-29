@@ -236,7 +236,7 @@ egov-user:
   decryption-abac-enabled: "false"
 
 inbox:
-  service-search-mapping: "{'FSM':{'searchPath':'https://niuatt.niua.in/fsm/v1/_search',
+  service.search.mapping: "{'FSM':{'searchPath':'https://niuatt.niua.in/fsm/v1/_search',
                             'dataRoot':'fsm','applNosParam':'applicationNos','businessIdProperty':'applicationNo',
                             'applsStatusParam':'applicationStatus'},
                             'FSM_POST_PAY_SERVICE':{'searchPath':'https://niuatt.niua.in/fsm/v1/_search',
