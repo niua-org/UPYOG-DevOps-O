@@ -167,17 +167,9 @@ citizen:
       <script src=https://s3.ap-south-1.amazonaws.com/egov-uat-assets/globalConfigs.js type=text/javascript></script>
       ';"
 egov-filestore:
-  replicas: 1
-  resources: |
-    limits:
-      cpu: 600m
-      memory: 512Mi
-    requests:
-      cpu: 600m
-      memory: 512Mi   
   heap: "-Xmx256m -Xms256m"
-  #volume: /opt/eGov/filestore
-  
+  memory_limits: 512Mi
+    
   healthChecks:
     enabled: false
     livenessProbePath: /filestore/health
