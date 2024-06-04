@@ -175,7 +175,7 @@ egov-filestore:
     requests:
       cpu: 600m
       memory: 512Mi   
-  heap: -Xmx412m -Xms412m -XX:TieredStopAtLevel=1
+  heap: "-Xmx256m -Xms256m"
   #volume: /opt/eGov/filestore
   
   healthChecks:
