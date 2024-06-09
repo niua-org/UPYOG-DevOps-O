@@ -102,7 +102,7 @@ env: |
   - name: ASSESSMENT_WORKFLOW_ENABLED
     value: "false"
   - name: EGOV_IDGEN_EWID_FORMAT
-    value: {{ index .Values "egov.idgen.ewid.format" | quote }}        
+    value: {{ index .Values "egov-idgen-ewid-format" | quote }}        
 
   - name: NOTIFICATION_SMS_ENABLED
     value: {{ index .Values "notification-sms-enabled" | quote }}
