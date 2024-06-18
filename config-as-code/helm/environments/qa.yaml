@@ -353,9 +353,14 @@ report:
   report-locationsfile-path: "file:///work-dir/configs/reports/reportFileLocationsv1.txt"
 
 pdf-service:
-
-  heap: "-Xmx256m -Xms256m"
-  memory_limits: 512Mi
+  replicas: 1
+  resources: |
+    limits:
+      cpu: 1200m
+      memory: 1Gi
+    requests:
+      cpu: 900m
+      memory: 700Mi 
   
   initContainers:
     gitSync:
