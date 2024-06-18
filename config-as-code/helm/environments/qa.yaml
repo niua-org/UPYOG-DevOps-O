@@ -353,6 +353,10 @@ report:
   report-locationsfile-path: "file:///work-dir/configs/reports/reportFileLocationsv1.txt"
 
 pdf-service:
+
+  heap: "-Xmx256m -Xms256m"
+  memory_limits: 512Mi
+  
   initContainers:
     gitSync:
       repo: "git@github.com:niua-org/upyog-configs-niuatt"     ##### Change repo url with Your fork Repo url
