@@ -371,6 +371,10 @@ pdf-service:
 
 # financials >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+asset-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
 egf-master:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
