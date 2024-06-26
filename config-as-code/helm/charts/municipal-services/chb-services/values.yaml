@@ -65,6 +65,11 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: egov-localization
+  - name: EGOV_BILLINGSERVICE_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: egov-service-host
+        key: billing-service
   #- name: EGOV_CALCULATION_HOST
   #  valueFrom:
   #    configMapKeyRef:
