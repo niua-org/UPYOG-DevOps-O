@@ -498,8 +498,8 @@ logging-config:
   es-port: "9200"
 
 jaeger:
-  host: "jaeger-agent.monitoring"
-  port: "6831"
+  host: "my-release-jaeger-operator-metrics"
+  port: "8383"
   sampler-type: const
   sampler-param: 1
   collector:
