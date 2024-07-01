@@ -383,6 +383,10 @@ pet-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
+ewaste-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
   
 egf-master:
   memory_limits: 512Mi
