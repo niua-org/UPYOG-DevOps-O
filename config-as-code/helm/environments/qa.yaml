@@ -375,6 +375,15 @@ asset-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
+property-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
+pet-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
+  
 egf-master:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
