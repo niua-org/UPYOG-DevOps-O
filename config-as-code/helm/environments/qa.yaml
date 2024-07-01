@@ -387,7 +387,7 @@ ewaste-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
-  
+
 egf-master:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
@@ -497,7 +497,9 @@ egov-hrms:
   java-args: -Dspring.profiles.active=monitoring
   employee-applink: "https://upyog-demo.egovernments.org/employee/user/login"
 
-
+chb-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
