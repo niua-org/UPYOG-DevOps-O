@@ -356,9 +356,9 @@ report:
   spring-datasource-tomcat-max-active: 5
   initContainers:
     gitSync:
-      repo: "git@github.com:niua-org/upyog-configs-niuatt.git"     ##### Change repo url with Your fork Repo url
+      repo: "git@github.com:niua-org/upyog-configs-niuatt"     ##### Change repo url with Your fork Repo url
       branch: "niua-dev"                                   ##### Change repo branch with Your fork Repo branch
-  report-locationsfile-path: "file:///work-dir/configs/reports/reportFileLocationsv1.txt"
+  report-locationsfile-path: "file:///work-dir/upyog-configs-niuatt/configs/reports/reportFileLocationsv1.txt"
 
 pdf-service:
   initContainers:
