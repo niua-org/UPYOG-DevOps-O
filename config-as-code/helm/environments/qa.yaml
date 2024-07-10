@@ -176,11 +176,11 @@ pgadmin:
 
 pgadmin-config:
   host: "niuatt-db.cvow82wmyh87.ap-south-1.rds.amazonaws.com"
-  db-admin-username: "egovprod"
+  db-admin-username: "niuatt"
   db-read-username: "pbprod_readonly"
   port: "5432"
   env: "PBPROD"
-  maintenance-db-name: "egov_prod_db"
+  maintenance-db-name: "postgres"
 
   
 egov-filestore:
