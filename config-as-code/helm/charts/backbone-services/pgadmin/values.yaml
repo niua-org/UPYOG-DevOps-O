@@ -23,7 +23,7 @@ image:
 
 replicas: "1"
 httpPort: "8080"
-dbUrl: "egov-dev-db.ctm6jbmr5mnj.ap-south-1.rds.amazonaws.com"
+dbUrl: "niuatt-db.cvow82wmyh87.ap-south-1.rds.amazonaws.com"
 dbPort: "5432"
 dbWriteUser: "read"
 dbReadUser: "write"
