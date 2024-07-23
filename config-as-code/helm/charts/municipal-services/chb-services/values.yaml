@@ -70,6 +70,11 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: billing-service
+  - name: EGOV_URL_SHORTNER_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: egov-service-host
+        key: egov-url-shortening
   #- name: EGOV_CALCULATION_HOST
   #  valueFrom:
   #    configMapKeyRef:
