@@ -410,10 +410,6 @@ billing-service:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
-collection-services:
-  memory_limits: 512Mi
-  heap: "-Xmx256m -Xms256m"
-
 egf-master:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
@@ -467,6 +463,9 @@ collection-services:
   receipt-search-paginate: "true"
   receipt-search-defaultsize: 30
   user-create-enabled: "true"
+
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
 
 
 collection-receipt-voucher-consumer:
