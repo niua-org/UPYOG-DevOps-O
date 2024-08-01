@@ -476,8 +476,10 @@ collection-receipt-voucher-consumer:
   zirakpur-erp-host: "https://zirakpur-qa.egovernments.org/"
 
 finance-collections-voucher-consumer:
-  erp-env-name: "qa"
-  erp-domain-name: "egovernments.org"
+  erp-env-name: "niuatt"
+  erp-domain-name: "niua.in"
+  memory_limits: 512Mi
+  heap: -Xmx256m -Xms256m
 
 
 user-otp:
