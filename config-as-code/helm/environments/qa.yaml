@@ -752,7 +752,7 @@ financeTenants: |
   location.user.role=Collection Operator
   collection.debitaccounthead.client.impl.class=org.egov.collection.integration.services.DebitAccountHeadDetailsServiceImpl
 egov-finance:
-  dev_mode: false
+  dev_mode: true
   filestore_beanname: microDiskFileStoreService
   microservice: |
     egov.default.services.endpoint=https://niuatt.niua.in/
