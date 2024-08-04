@@ -754,6 +754,8 @@ financeTenants: |
 egov-finance:
   dev_mode: true
   filestore_beanname: microDiskFileStoreService
+  memory_limits: 512Mi
+  heap: -Xmx256m -Xms256m
   microservice: |
     egov.default.services.endpoint=https://niuatt.niua.in/
     egov.collection.version={{ index .Values "collection-version" }}
