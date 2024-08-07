@@ -753,10 +753,10 @@ financeTenants: |
   location.user.role=Collection Operator
   collection.debitaccounthead.client.impl.class=org.egov.collection.integration.services.DebitAccountHeadDetailsServiceImpl
 
-hostName: |
-  niuatt.niua.in
-  citya-niuatt.niua.in
-  cityb-niuatt.niua.in
+#hostName: |
+  #niuatt.niua.in
+  #citya-niuatt.niua.in
+  #cityb-niuatt.niua.in
   
   
 egov-finance:
