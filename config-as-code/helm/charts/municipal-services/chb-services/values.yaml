@@ -75,6 +75,11 @@ env: |
       configMapKeyRef:
         name: egov-service-host
         key: egov-url-shortening
+  - name: EGOV_ENC_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: egov-service-host
+        key: egov-enc-service
   #- name: EGOV_CALCULATION_HOST
   #  valueFrom:
   #    configMapKeyRef:
@@ -92,6 +97,10 @@ env: |
         name: egov-config
         key: tracer-errors-provideexceptionindetails
   {{- end }}
+  - name: DECRYPTION_ABAC_ENABLED
+    value: {{ index .Values "chb-decryption-abac-enabled" | quote }}
+  - name: KAFKA_TOPIC_AUDIT
+    value: "enc-user-audit-data" 
   - name: SPRING_KAFKA_CONSUMER_GROUP_ID
     value: chb-services
   - name: PERSISTER_SAVE_COMMUNITYHALL_BOOKING_TOPIC
