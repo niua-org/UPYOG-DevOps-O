@@ -10,15 +10,8 @@ metadata:
   name: {{ template "jenkins.fullname" . }}
   namespace: {{ template "jenkins.namespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
-{{- if .Values.persistence.labels }}
-{{ toYaml .Values.persistence.labels | indent 4 }}
-{{- end }}
+{{- include "common.labels" . | nindent 4 }} 
 spec:
-{{- if .Values.persistence.dataSource }}
-  dataSource:
-{{ toYaml .Values.persistence.dataSource | indent 4 }}
-{{- end }}
   accessModes:
     - {{ .Values.persistence.accessMode | quote }}
   resources:
@@ -28,7 +21,7 @@ spec:
 {{- if (eq "-" .Values.persistence.storageClass) }}
   storageClassName: ""
 {{- else }}
-  storageClassName: "{{ tpl .Values.persistence.storageClass . }}"
+  storageClassName: "{{ .Values.persistence.storageClass }}"
 {{- end }}
 {{- end }}
 {{- end }}

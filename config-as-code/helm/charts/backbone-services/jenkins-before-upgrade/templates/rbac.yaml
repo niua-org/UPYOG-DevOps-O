@@ -6,9 +6,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: {{ $serviceName }}-schedule-agents
-  namespace: {{ template "jenkins.agent.namespace" . }}
+  namespace: {{ template "jenkins.master.slaveKubernetesNamespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 rules:
 - apiGroups: [""]
   resources: ["pods", "pods/exec", "pods/log", "persistentvolumeclaims", "events"]
@@ -25,9 +25,9 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: {{ $serviceName }}-schedule-agents
-  namespace: {{ template "jenkins.agent.namespace" . }}
+  namespace: {{ template "jenkins.master.slaveKubernetesNamespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -48,7 +48,7 @@ metadata:
   name: {{ template "jenkins.fullname" . }}-read-secrets
   namespace: {{ template "jenkins.namespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 rules:
   - apiGroups: [""]
     resources: ["secrets"]
@@ -62,7 +62,7 @@ metadata:
   name: {{ $serviceName }}-read-secrets
   namespace: {{ template "jenkins.namespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -75,44 +75,7 @@ subjects:
 ---
 {{- end}}
 
-{{- if .Values.rbac.useOpenShiftNonRootSCC }}
-# This is needed if you are running on OpenShift and using the default
-# containerSecurityContext in the chart. It grants the Jenkins service account
-# permission to use the "nonroot" and "nonroot-v2" SecurityContextConstraints.
-apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
-metadata:
-  name: {{ $serviceName }}-use-nonroot-scc
-  namespace: {{ template "jenkins.namespace" . }}
-  labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
-rules:
-  - apiGroups: ["security.openshift.io"]
-    resources: ["securitycontextconstraints"]
-    resourceNames: ["nonroot", "nonroot-v2"]
-    verbs: ["use"]
----
-
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: {{ $serviceName }}-use-nonroot-scc
-  namespace: {{ template "jenkins.namespace" . }}
-  labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: Role
-  name: {{ template "jenkins.fullname" . }}-use-nonroot-scc
-subjects:
-  - kind: ServiceAccount
-    name: {{ template "jenkins.serviceAccountName" . }}
-    namespace: {{ template "jenkins.namespace" . }}
-
----
-{{- end}}
-
-{{- if .Values.controller.sidecars.configAutoReload.enabled }}
+{{- if .Values.master.sidecars.configAutoReload.enabled }}
 # The sidecar container which is responsible for reloading configuration changes
 # needs permissions to watch ConfigMaps
 apiVersion: rbac.authorization.k8s.io/v1
@@ -121,7 +84,7 @@ metadata:
   name: {{ template "jenkins.fullname" . }}-casc-reload
   namespace: {{ template "jenkins.namespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 rules:
 - apiGroups: [""]
   resources: ["configmaps"]
@@ -135,7 +98,7 @@ metadata:
   name: {{ $serviceName }}-watch-configmaps
   namespace: {{ template "jenkins.namespace" . }}
   labels:
-    {{- include "jenkins.labels" . | nindent 4 }}
+{{- include "common.labels" . | nindent 4 }} 
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
