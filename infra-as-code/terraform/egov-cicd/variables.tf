@@ -3,7 +3,7 @@
 #
 
 variable "cluster_name" {
-  default = "egov-cicd"
+  default = "jenkins-niuatt"
 }
 
 variable "vpc_cidr_block" {
@@ -19,7 +19,7 @@ variable "availability_zones" {
 }
 
 variable "kubernetes_version" {
-  default = "1.22"
+  default = "1.35"
 }
 
 variable "instance_type" {
