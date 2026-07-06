@@ -492,6 +492,14 @@ asset-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
+echallan-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
+ws-services:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
+
 property-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
