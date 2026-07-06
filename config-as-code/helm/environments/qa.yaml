@@ -496,7 +496,7 @@ echallan-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
-ws-services:
+sw-services:
   memory_limits: 512Mi
   heap: "-Xmx256m -Xms256m"
 
