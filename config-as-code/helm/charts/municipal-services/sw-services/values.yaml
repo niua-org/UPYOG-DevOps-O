@@ -162,4 +162,5 @@ env: |
     value: "true"
   {{- end }}
   - name: IS_EXTERNAL_WORKFLOW_ENABLED
-    value: {{ index .Values "is-external-workflow-enabled" | quote }}
+    value: "true"
+    # value: {{ index .Values "is-external-workflow-enabled" | quote }}
