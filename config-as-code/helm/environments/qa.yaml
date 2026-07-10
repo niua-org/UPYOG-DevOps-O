@@ -419,6 +419,8 @@ upyog-voice-bot:
   memory_limits: 2Gi
 
 dashboard-analytics:
+  memory_limits: 512Mi
+  heap: "-Xmx256m -Xms256m"
   config-schema-paths: "file:///work-dir/upyog-configs/configs/egov-dss-dashboards/dashboard-analytics/*.json"
   initContainers:
     gitSync:
