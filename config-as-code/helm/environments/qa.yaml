@@ -240,6 +240,10 @@ pgadmin-config:
 mdms-v2:
   heap:  "-Xmx512m -Xms512m"
   memory_limits: "768Mi"
+
+egov-enc-service:
+  memory_limits: 512Mi
+  heap: "-Xmx384m -Xms256m"  
   
 apply-workflow:
   heap: "-Xmx256m -Xms256m"
